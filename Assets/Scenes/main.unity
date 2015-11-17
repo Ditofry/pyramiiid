@@ -185,7 +185,7 @@ GameObject:
   - 218: {fileID: 1191941767}
   - 154: {fileID: 1191941766}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
