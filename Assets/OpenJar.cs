@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class OpenJar : MonoBehaviour {
-    public float moveSpeed = 10f;
-    public float turnSpeed = 50f;
+    public float moveSpeed = 1f;
+    public float turnSpeed = 30f;
     //RaycastHit myhit = new RaycastHit();
     //Ray myray = new Ray();
 
