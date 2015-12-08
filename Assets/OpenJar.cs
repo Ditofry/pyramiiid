@@ -4,62 +4,47 @@ using System.Collections;
 public class OpenJar : MonoBehaviour {
     public float moveSpeed = 1f;
     public float turnSpeed = 30f;
-    //RaycastHit myhit = new RaycastHit();
-    //Ray myray = new Ray();
+    public Camera camera;
+    
 
 	void Start () {
-      
+
+       
 	
 	}
 	
 	void Update () {
 
-        /*myray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(myray, out myhit, 1000.0f) && Input.GetMouseButtonDown(0))
-            StartCoroutine("moveJar");*/
-        /*if (Input.GetKey(KeyCode.I))
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.M))
-            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.K))
-            transform.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.J))
-            transform.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);*/
-        if (Input.GetButtonDown("OpenUp"))
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Transform objectHit = hit.transform;
+            //objectHit.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            //Debug.Log(objectHit);
+            if (Input.GetKey(KeyCode.I))
+                objectHit.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.M))
+                objectHit.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.K))
+                objectHit.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.J))
+                objectHit.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);
+
+            // do whatever you want
+        }
+
+        /*if (Input.GetButtonDown("OpenUp"))
             transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         if (Input.GetButtonDown("OpenDown"))
             transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
         if (Input.GetButtonDown("TwistRight"))
             transform.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
         if (Input.GetButtonDown("TwistLeft"))
-            transform.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);*/
          
                     
        
       
     }
-    /*void OnMouseDown()
-    {
-        if (Input.GetButtonDown("OpenUp"))
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-        if (Input.GetButtonDown("OpenDown"))
-            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
-        if (Input.GetButtonDown("TwistRight"))
-            transform.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
-        if (Input.GetButtonDown("TwistLeft"))
-            transform.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);
-
-    }*/
-    /*void moveJar()
-    {
-        if (Input.GetKey(KeyCode.I))
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.M))
-            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.K))
-            transform.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.J))
-            transform.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);
-
-    }*/
 }
