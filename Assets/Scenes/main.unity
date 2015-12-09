@@ -19693,6 +19693,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 141276, guid: 2a8cebc841141459a9c380e9ddac747c, type: 2}
+      propertyPath: m_Name
+      value: sarcophagusLid
+      objectReference: {fileID: 0}
+    - target: {fileID: 120808, guid: 2a8cebc841141459a9c380e9ddac747c, type: 2}
+      propertyPath: m_Name
+      value: BaboonHead
+      objectReference: {fileID: 0}
+    - target: {fileID: 104130, guid: 2a8cebc841141459a9c380e9ddac747c, type: 2}
+      propertyPath: m_Name
+      value: JackalHead
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a8cebc841141459a9c380e9ddac747c, type: 2}
   m_IsPrefabParent: 0

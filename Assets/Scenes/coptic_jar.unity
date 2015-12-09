@@ -327,7 +327,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -436,6 +436,7 @@ GameObject:
   - 224: {fileID: 666478982}
   - 222: {fileID: 666478981}
   - 114: {fileID: 666478980}
+  - 114: {fileID: 666478983}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -455,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: 0, g: 0, b: .000108131695, a: .852999985}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -469,7 +470,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -496,8 +497,20 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &666478983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 666478979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989a7669faada7a40b228c0bdc51edfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 755623576}
 --- !u!1 &748602920
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +856,6 @@ MonoBehaviour:
   moveSpeed: 1
   turnSpeed: 30
   camera: {fileID: 755623576}
-  artifactText: {fileID: 0}
 --- !u!65 &989535740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1261,7 +1273,6 @@ MonoBehaviour:
   moveSpeed: 1
   turnSpeed: 30
   camera: {fileID: 755623576}
-  artifactText: {fileID: 0}
 --- !u!23 &1521658524
 MeshRenderer:
   m_ObjectHideFlags: 0
