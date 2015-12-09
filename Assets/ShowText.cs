@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ShowText : MonoBehaviour {
+public class ShowText : MonoBehaviour
+{
     Text artifactText;
     bool reveal_text = true;
     public Camera camera;
@@ -20,11 +21,12 @@ public class ShowText : MonoBehaviour {
     string Ra;
     string Khnum;
     string Apis;
-    string Bastet; 
-    
+    string Bastet;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start()
+    {
 
         artifactText = gameObject.GetComponent<Text>();
         //artifactText = myCanvas.GetComponent<Text>();
@@ -54,13 +56,13 @@ public class ShowText : MonoBehaviour {
             artifactText.text = name;
             reveal_text = false;
         }
-            
+
         else
         {
             artifactText.text = "";
             reveal_text = true;
         }
-            
+
 
 
     }
@@ -74,16 +76,25 @@ public class ShowText : MonoBehaviour {
         {
 
             Transform objectHit = hit.transform;
-            Debug.Log(objectHit.name);
+            //Debug.Log(objectHit.name);
             if (Input.GetKey(KeyCode.H))
             {
-                revealText(objectHit.name);
-                
+                if (objectHit.name == "JackalHead")
+                {
+                    revealText(JackalHead);
+                }
+                if (objectHit.name == "Imseti")
+                {
+                    revealText(Imseti);
+                }
+
+
+
             }
 
         }
 
     }
-	
-	
+
+
 }
