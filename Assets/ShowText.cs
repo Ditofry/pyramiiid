@@ -87,7 +87,46 @@ public class ShowText : MonoBehaviour
                 {
                     revealText(Imseti);
                 }
-
+                if (objectHit.name == "BaboonHead")
+                {
+                    revealText(BaboonHead);
+                }
+                if (objectHit.name == "Qebe")
+                {
+                    revealText(Qebe);
+                }
+                if (objectHit.name == "sarcophagusLid")
+                {
+                    revealText(sarcophagusLid);
+                }
+                if (objectHit.name == "Coffin")
+                {
+                    revealText(Coffin);
+                }
+                if (objectHit.name == "Mummy")
+                {
+                    revealText(Mummy);
+                }
+                if (objectHit.name == "OverMummy")
+                {
+                    revealText(OverMummy);
+                }
+                if (objectHit.name == "Ra")
+                {
+                    revealText(Ra);
+                }
+                if (objectHit.name == "Khnum")
+                {
+                    revealText(Khnum);
+                }
+                if (objectHit.name == "Apis")
+                {
+                    revealText(Apis);
+                }
+                if (objectHit.name == "Bastet")
+                {
+                    revealText(Bastet);
+                }
 
 
             }

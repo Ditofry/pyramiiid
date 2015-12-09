@@ -10,13 +10,13 @@ public class OpenJar : MonoBehaviour
 
     void Start()
     {
-        
+
 
 
 
     }
 
-    
+
 
     void Update()
     {
@@ -30,14 +30,17 @@ public class OpenJar : MonoBehaviour
             Debug.Log(hit);
             //objectHit.Translate(Vector3.up * moveSpeed * Time.deltaTime);
             //Debug.Log(objectHit);
-            if (Input.GetKey(KeyCode.I))
-                objectHit.Translate(objectHit.transform.up * moveSpeed * Time.deltaTime);
-            if (Input.GetKey(KeyCode.M))
-                objectHit.Translate(-objectHit.transform.up * moveSpeed * Time.deltaTime);
-            if (Input.GetKey(KeyCode.K))
-                objectHit.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
-            if (Input.GetKey(KeyCode.J))
-                objectHit.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);
+            if ((objectHit.name == "BaboonHead") || (objectHit.name == "JackalHead") || (objectHit.name == "Imseti") || (objectHit.name == "Qebe") || (objectHit.name == "sarcophagusLid") || (objectHit.name == "Coffin") || (objectHit.name == "Mummy") || (objectHit.name == "OverMummy") || (objectHit.name == "Ra") || (objectHit.name == "Khnum") || (objectHit.name == "Apis") || (objectHit.name == "Bastet"))
+            {
+                if (Input.GetKey(KeyCode.I))
+                    objectHit.Translate(objectHit.transform.up * moveSpeed * Time.deltaTime);
+                if (Input.GetKey(KeyCode.M))
+                    objectHit.Translate(-objectHit.transform.up * moveSpeed * Time.deltaTime);
+                if (Input.GetKey(KeyCode.K))
+                    objectHit.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
+                if (Input.GetKey(KeyCode.J))
+                    objectHit.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);
+            }
 
             // do whatever you want
         }
