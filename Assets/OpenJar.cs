@@ -21,7 +21,7 @@ public class OpenJar : MonoBehaviour
     void Update()
     {
 
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Screen.height-Input.mousePosition.y));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {

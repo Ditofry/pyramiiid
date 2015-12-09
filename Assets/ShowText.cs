@@ -69,7 +69,7 @@ public class ShowText : MonoBehaviour
     void Update()
     {
 
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Screen.height - Input.mousePosition.y));
         //artifactText.text = "Please Let this work";
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
