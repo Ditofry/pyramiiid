@@ -77,7 +77,8 @@ public class ShowText : MonoBehaviour
 
             Transform objectHit = hit.transform;
             //Debug.Log(objectHit.name);
-            if (Input.GetKey(KeyCode.H))
+            //if (Input.GetKey(KeyCode.H))
+			(Input.GetButtonDown("ArtifactText"))
             {
                 if (objectHit.name == "JackalHead")
                 {
