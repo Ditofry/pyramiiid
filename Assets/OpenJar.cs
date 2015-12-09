@@ -32,14 +32,22 @@ public class OpenJar : MonoBehaviour
             //Debug.Log(objectHit);
 			if ((objectHit.name == "JackalBase") || (objectHit.name == "WomanBase") ||(objectHit.name == "BaboonHead") || (objectHit.name == "JackalHead") || (objectHit.name == "Imseti") || (objectHit.name == "Qebe") || (objectHit.name == "sarcophagusLid") || (objectHit.name == "Coffin") || (objectHit.name == "Mummy") || (objectHit.name == "OverMummy") || (objectHit.name == "Ra") || (objectHit.name == "Khnum") || (objectHit.name == "Apis") || (objectHit.name == "Bastet"))
             {
-				f (Input.GetButtonDown("OpenUp"))
+				if (Input.GetButtonDown("OpenUp"))
+				{
 					transform.Translate(objectHit.transform.up * moveSpeed * Time.deltaTime);
+				}
 				if (Input.GetButtonDown("OpenDown"))
+				{
 					transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+				}
 				if (Input.GetButtonDown("TwistRight"))
+				{
 					transform.Rotate(Vector3.right, -turnSpeed * Time.deltaTime);
+				}
 				if (Input.GetButtonDown("TwistLeft"))
+				{
 					transform.Rotate(Vector3.left, -turnSpeed * Time.deltaTime);
+				}
                 /*if (Input.GetKey(KeyCode.I))
                     objectHit.Translate(objectHit.transform.up * moveSpeed * Time.deltaTime);
                 if (Input.GetKey(KeyCode.M))
