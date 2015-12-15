@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class ScanRadiation : MonoBehaviour {
-
-	// Should it be the concern of the player script to determine spawn location?
+	// Should it be the concern of the player script rather than this one 
+	// to determine spawn location rather? Not sure that I like the way 
+	// these concerns are seperated...
 	private Transform explorerTransform;
 	private Transform scanBubble;
 	Bounds bounds;
@@ -12,7 +13,8 @@ public class ScanRadiation : MonoBehaviour {
 		// ¯\_(ツ)_/¯
 		scanBubble = this.transform;
 		explorerTransform = GameObject.FindGameObjectWithTag ("Player").transform;
-		// We want the sphere to expand in front of explorer
+		// We want the sphere to expand in front of explorer with diameter 
+		// flush with the camera
 		scanBubble.up = explorerTransform.up;
 		scanBubble.position = explorerTransform.position;
 	}
@@ -24,10 +26,11 @@ public class ScanRadiation : MonoBehaviour {
 	void Dissapate(){
 		Destroy (gameObject);
 	}
-
-	// Update is called once per frame
+	
 	void Update () {
-		if (scanBubble.localScale.magnitude < 100) {
+		// Bubble magnitude of 300 will allow the scan to make it most of the 
+		// way down the longer corridors
+		if (scanBubble.localScale.magnitude < 300) {
 			Grow ();
 		} else Dissapate();
 	}

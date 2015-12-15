@@ -25,6 +25,9 @@ public class RoomScan : MonoBehaviour {
 		// Play this one no matter what
 		if (scanBlip)
 			audio.PlayOneShot (scanBlip);
+		// No eval if PAM's already speaking to us, we won't lose visual effect
+		if (audio.isPlaying)
+			return;
 		// This is kind of lame, but time is of the essence and it works
 		// well with our little sim
 		float pos = this.transform.position.y;
